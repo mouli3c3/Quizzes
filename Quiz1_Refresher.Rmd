@@ -1,0 +1,148 @@
+---
+title: "Refresher QuiZ"
+tutorial:
+  id: "Quiz1"
+output: learnr::tutorial
+version: 1.0
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+### Quiz
+
+Some questions to verify that you understand the purposes of various base and recommended R packages:
+
+```{r quiz}
+quiz(
+  question("1.Which package contains functions for installing other R packages?",
+    answer("base"),
+    answer("tools"),
+    answer("utils", correct = TRUE),
+    answer("codetools")
+  ),
+  question("2.Which of the R packages listed below are used to create plots?",
+    answer("lattice", correct = TRUE),
+    answer("tools"),
+    answer("stats"),
+    answer("grid", correct = TRUE),
+    answer("ggplot2",correct = TRUE)
+  ),
+  question("3.What is the function to find the # of rows and columns of a data frame?",
+    answer("dim", correct = TRUE),
+    answer("length"),
+    answer("nrow"),
+    answer("ncol")
+  ),
+  question("4.Which of these options is correct assignment statement?",
+    answer("C<-6"),
+    answer("A=7"),
+    answer("D<-5+7"),
+    answer("All of the above",correct = TRUE)
+  ),
+  question("5.In R the following are all atomic data types EXCEPT: (Select all that apply)",
+    answer("list",correct = TRUE),
+    answer("array",correct = TRUE),
+    answer("matrix",correct = TRUE),
+    answer("table")
+  ),
+  question("6.If I execute the expression x <- 4 in R, what is the class of the object x as determined by the 'class()' function?",
+    answer("numeric",correct = TRUE),
+    answer("vector"),
+    answer("data frame"),
+    answer("tibble")
+  ),
+  question("7.What could be used to find the indices of a vector/column in a data frame that satisfy a condition?",
+    answer("subset"),
+    answer("which",correct = TRUE),
+    answer("row.names"),
+    answer("colnames")
+  ),
+  question("8.What is the class of the object defined by the expression x <- c(4, “a”, TRUE)",
+    answer("vector"),
+    answer("logical"),
+    answer("character",correct = TRUE),
+    answer("string")
+  ),
+  
+  question("9.This is TRUE about data frames",
+    answer("Can only have same data type in all rows across a column", correct = TRUE),
+    answer("Can have different lengths/row size for each column")
+    
+  ),
+  question("10.What is the result of this operation c(1,3,4)+c(1,2)",
+    answer("2 5 5",correct = TRUE),
+    answer("ERROR"),
+    answer("Warning: longer object length is not a multiple of shorter object length",correct = TRUE),
+    answer("None of the Above")
+  )
+  
+)
+```
+
+###  Exercise
+11.Write the R code required to add two plus two:
+
+```{r e1, exercise=TRUE}
+
+```
+
+12.Suppose we have a list defined as x <- list(2, "a", "b", TRUE). What does x[[1]] give me?
+
+```{r e2, exercise=TRUE, exercise.lines = 3,exercise=TRUE}
+
+print("TYPE YOUR ANSWER HERE")
+```
+
+13.Suppose we have a vector x <- c(17, 14, 4, 5, 13, 12, 10) and I want to set all elements of this vector that are greater than 10 to be equal to 4. What R code achieves this?
+
+```{r e3, exercise=TRUE}
+
+```
+
+14.Modify this code so that it prints only the first 5 rows of the mtcars dataset:
+
+```{r e4, exercise=TRUE,exercise.eval=FALSE}
+head(mtcars)
+```
+
+15.What is the value of hp(Horsepower) in $mtcars$ for 32nd  row?
+
+```{r e5, exercise=TRUE,exercise.eval=FALSE}
+
+```
+
+16.How many missing values are in the $mpg$column of $mtcars$ data frame?
+
+```{r e6, exercise=TRUE,exercise.eval=FALSE}
+
+```
+
+17.Plot $mpg$,$cyl$ for data $mtcars$ using $ggplot2$?
+
+```{r e7, exercise=TRUE,exercise.eval=FALSE}
+
+```
+
+18.Plot $mpg$,$wt$ for data $mtcars$ using $ggplot2$?
+
+```{r e8, exercise=TRUE,exercise.eval=FALSE}
+
+```
+
+19.What is the command/function for installing a package in R from CRAN?
+
+```{r e9, exercise=TRUE,exercise.eval=FALSE}
+print("YOUR ANSWER HERE")
+
+```
+
+20.What is the command/function for loading a package in R?
+
+```{r e10, exercise=TRUE,exercise.eval=FALSE}
+print("YOUR ANSWER HERE")
+
+```
